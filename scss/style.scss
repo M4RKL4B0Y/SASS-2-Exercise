@@ -1,61 +1,61 @@
 // 1. declare 5 sass variables and use them in rulesets
 
 // Declaring Sass variables
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
-$font-stack: 'Helvetica Neue', sans-serif;
-$border-radius: 5px;
-$padding: 20px;
+// $primary-color: #3498db;
+// $secondary-color: #2ecc71;
+// $font-stack: 'Helvetica Neue', sans-serif;
+// $border-radius: 5px;
+// $padding: 20px;
 
-// Using variables in rule sets
-body {
-  font-family: $font-stack;
-  color: $primary-color;
-  padding: $padding;
-}
+// // Using variables in rule sets
+// body {
+//   font-family: $font-stack;
+//   color: $primary-color;
+//   padding: $padding;
+// }
 
-button {
-  background-color: $primary-color;
-  color: #fff;
-  border: none;
-  border-radius: $border-radius;
-  padding: $padding / 2;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+// button {
+//   background-color: $primary-color;
+//   color: #fff;
+//   border: none;
+//   border-radius: $border-radius;
+//   padding: $padding / 2;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
 
-  &:hover {
-    background-color: $secondary-color;
-  }
-}
+//   &:hover {
+//     background-color: $secondary-color;
+//   }
+// }
 
-.card {
-  border: 1px solid $primary-color;
-  border-radius: $border-radius;
-  padding: $padding;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+// .card {
+//   border: 1px solid $primary-color;
+//   border-radius: $border-radius;
+//   padding: $padding;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+// }
 
-.navbar {
-  background-color: $secondary-color;
-  color: #fff;
-  padding: $padding / 2;
+// .navbar {
+//   background-color: $secondary-color;
+//   color: #fff;
+//   padding: $padding / 2;
 
-  a {
-    color: #fff;
-    text-decoration: none;
+//   a {
+//     color: #fff;
+//     text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
+//     &:hover {
+//       text-decoration: underline;
+//     }
+//   }
+// }
 
-.footer {
-  background-color: darken($primary-color, 10%);
-  color: lighten(#fff, 10%);
-  padding: $padding;
-  text-align: center;
-}
+// .footer {
+//   background-color: darken($primary-color, 10%);
+//   color: lighten(#fff, 10%);
+//   padding: $padding;
+//   text-align: center;
+// }
 
 // 2. declare sass nested selectors that will generate this css
 // .container .box {
@@ -125,3 +125,23 @@ button {
 // }
 // 5. write a function that will return 50% if the parameter passed in is red and 100% if the parameter is blue, and 0% if anything else
 // 6. write a loop that will generate .col-md-X selectors where X is a number from 1-12 and the ruleset of each selector is width: Y% where Y is 100/(12/X)
+
+//7. write a function that errors if the parameter passed in is 100%, warn if 50%, and debug if 0%
+// @function error-handle($percentage-of-errors) {
+//   @if $percentage-of-errors == 100% {
+//     @error "Error";
+//   } @else if $percentage-of-errors == 50% {
+//     @warn "Warning";
+//   } @else if $percentage-of-errors == 0% {
+//     @debug "Debug";
+//   }
+
+//   @return $percentage-of-errors;
+// }
+
+// .container{
+//   width: error-handle(50%); //Warning
+//   width: error-handle(0%); //Debug
+//   width: error-handle(75%); //
+//   width: error-handle(100%);//Error
+// }
